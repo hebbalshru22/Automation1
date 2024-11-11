@@ -24,6 +24,7 @@ public class BaseClass {
             FileInputStream fs=new FileInputStream("C:\\New prog\\DemoProject\\src\\test\\java\\com\\qapitol\\util\\data.properties");
              prop.load(fs);
            String browsername=  prop.getProperty("browser");
+
            if(browsername.equalsIgnoreCase("chrome"))
            {
                driver=new ChromeDriver();
@@ -35,7 +36,7 @@ public class BaseClass {
            }
             driver.get(prop.getProperty("url"));
 
-           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
        // Thread.sleep(30);
         driver.manage().window().maximize();
@@ -43,8 +44,8 @@ public class BaseClass {
 
     }
   @AfterMethod
-    public static void teardown()
-    {
+    public static void teardown() throws InterruptedException {
+        Thread.sleep(30);
        driver.close();
 
     }
