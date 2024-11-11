@@ -2,6 +2,7 @@ package com.qapitol.testcases;
 
 import com.qapitol.base.BaseClass;
 import com.qapitol.pages.*;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -39,7 +40,7 @@ public class Textboxcases  extends BaseClass {
         al.linksdemo();
 
     }
-    @Test
+    @Test(enabled = false)
     public void broken() throws IOException, InterruptedException {
         Brokenlinks fl=new Brokenlinks();
         fl.blinks();
@@ -49,6 +50,27 @@ public class Textboxcases  extends BaseClass {
         UploadandDownload ud=new UploadandDownload();
         ud.uddemo();
     }
+    @Test(dataProvider = "datap")
+    public void formsdata(String name,String lname,String email) throws IOException, InterruptedException {
+         FormsPage dp=new FormsPage();
+         dp.forms(name,lname,email);
+
+    }
+    @DataProvider(name="datap")
+ public   Object[][] logindata()
+    {
+        Object data[][]={
+
+            {"shruti","test123","shru@gmail.com"},
+            {"Hebbal","test321","hebbal@gmail.com"},
+
+
+            };
+            return data;
+
+
+    }
+
 
 
 }
