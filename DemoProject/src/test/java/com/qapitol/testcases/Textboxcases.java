@@ -2,6 +2,7 @@ package com.qapitol.testcases;
 
 import com.qapitol.base.BaseClass;
 import com.qapitol.pages.*;
+import com.qapitol.util.ExcelData;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -50,13 +51,14 @@ public class Textboxcases  extends BaseClass {
         UploadandDownload ud=new UploadandDownload();
         ud.uddemo();
     }
-    @Test(dataProvider = "datap")
+  /*@Test(dataProvider = "datap",enabled = false)
+    @Test
     public void formsdata(String name,String lname,String email) throws IOException, InterruptedException {
          FormsPage dp=new FormsPage();
          dp.forms(name,lname,email);
 
     }
-    @DataProvider(name="datap")
+     @DataProvider(name="datap")
  public   Object[][] logindata()
     {
         Object data[][]={
@@ -69,8 +71,18 @@ public class Textboxcases  extends BaseClass {
             return data;
 
 
+    }*/
+    @Test(enabled=false)
+    public void formsdata() throws IOException, InterruptedException {
+        FormsPage dp=new FormsPage();
+        dp.forms();
+
+    }
+
     }
 
 
 
-}
+
+
+

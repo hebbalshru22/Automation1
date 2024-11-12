@@ -36,14 +36,14 @@ public class BaseClass {
            }
             driver.get(prop.getProperty("url"));
 
-           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 
        // Thread.sleep(30);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
 
     }
-  @AfterMethod
+ // @AfterMethod
     public static void teardown() throws InterruptedException {
         Thread.sleep(30);
        driver.close();
