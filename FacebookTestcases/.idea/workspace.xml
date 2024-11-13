@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6492522a-fe61-41b6-8e84-d8dbaede5bef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/src/test/java/BaseClass/Basefb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/src/test/java/TestCases/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/src/test/java/TestCases/RegistrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/src/test/java/TestPages/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacebookTestng/src/test/java/TestPages/RegistrationPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/basepack/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/basepack/Registration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/demo/BaseClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/demo/Elements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/demo/Forms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/facedbookpack/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/facedbookpack/Loginpage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/facedbookpack/Registrationpage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/facedbookpack/Registrationtest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectpractice/src/main/java/org/example/facedbookpack/forgotpasswordpage.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hebbalshru22&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hebbalshru22/Automation1.git&quot;,
+    &quot;accountId&quot;: &quot;8ea0a656-c34c-466d-8520-b471d28351cf&quot;
+  }
+}</component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="TestNG" name="LoginTest" />
+    </enabled-run-configurations>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2ok714RSR62he75iOKqZ40tMvTK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.LoginTest (1).executor": "Run",
+    "TestNG.LoginTest (2).executor": "Run",
+    "TestNG.LoginTest.Logintest.executor": "Run",
+    "TestNG.LoginTest.executor": "Run",
+    "TestNG.RegistrationTest (1).executor": "Run",
+    "TestNG.RegistrationTest.executor": "Run",
+    "TestNG.RegistrationTest.registration.executor": "Run",
+    "git-widget-placeholder": "Automation1",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/New prog/FacebookTestcases",
+    "onboarding.tips.debug.path": "C:/New prog/FacebookTestng/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="TestNG.LoginTest (2)">
+    <configuration name="LoginTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FacebookTestng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FacebookTestng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FacebookTestng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FacebookTestng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.RegistrationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.registration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FacebookTestng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.RegistrationTest" />
+      <option name="METHOD_NAME" value="registration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LoginTest (2)" />
+        <item itemvalue="TestNG.RegistrationTest.registration" />
+        <item itemvalue="TestNG.RegistrationTest" />
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.LoginTest (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6492522a-fe61-41b6-8e84-d8dbaede5bef" name="Changes" comment="" />
+      <created>1731401501490</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731401501490</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
