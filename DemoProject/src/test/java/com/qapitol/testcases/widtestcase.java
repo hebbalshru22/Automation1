@@ -8,8 +8,9 @@ public class widtestcase extends BaseClass {
 
     @Test
     public void widget() throws InterruptedException {
-        Widgets w=new Widgets();
+        Widgets w = new Widgets();
         //w.datepicker();
-        w.AutoComplete();
+        // w.AutoComplete();
+        w.SelectMenue();
     }
 }

@@ -15,9 +15,9 @@ public class TextBox extends BaseClass {
         driver.findElement(By.id("userEmail")).sendKeys("hebbalshru22@gmail.com");
         driver.findElement((By.id("currentAddress"))).sendKeys("Shrinagar");
         driver.findElement(By.id("permanentAddress")).sendKeys("Navanagar");
-        WebElement ele= driver.findElement(By.xpath("//*[text()=\"Submit\"]"));
-        JavascriptExecutor js=(JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click()",ele);
+        WebElement ele = driver.findElement(By.xpath("//*[text()=\"Submit\"]"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click()", ele);
 
 
     }

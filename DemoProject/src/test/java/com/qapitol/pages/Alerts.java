@@ -36,27 +36,25 @@ public class Alerts {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", ff);
 
-        WebElement vv = driver.findElement(By.id("messageWindowButton"));
-        js.executeScript("arguments[0].click()", vv);
-        Set<String> ss = driver.getWindowHandles();
-        Iterator<String> itr = ss.iterator();
-        String fwin = itr.next();
-        String swin = itr.next();
-        System.out.println(driver.switchTo().window(swin).getCurrentUrl());
-
+        WebElement Web = driver.findElement(By.id("windowButton"));
+        js.executeScript("arguments[0].click()", Web);
+        Set<String> str = driver.getWindowHandles();
+        Iterator<String> itr = str.iterator();
+        String nstr = itr.next();
+        String rrt = itr.next();
+        driver.switchTo().window(rrt);
+        WebElement der = driver.findElement(By.id("sampleHeading"));
+        System.out.println(der.getText());
         driver.close();
-        System.out.println(driver.switchTo().window(fwin));
-        // driver.close();
-
     }
 
     public void iframe() {
         driver.findElement(By.xpath("//*[text()=\"Alerts, Frame & Windows\"]")).click();
-       WebElement bb = driver.findElement(By.id("item-2"));
+        WebElement bb = driver.findElement(By.id("item-2"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", bb);
         driver.switchTo().frame("frame1");
-        String txt =driver.findElement(By.id("sampleHeading")).getText();
+        String txt = driver.findElement(By.id("sampleHeading")).getText();
 
         System.out.println(txt);
 
@@ -64,24 +62,28 @@ public class Alerts {
 
         driver.switchTo().frame("frame2");
 
-        String txt1 = driver.findElement(By.id("sampleHeading")).getText();System.out.println(txt1);
+        String txt1 = driver.findElement(By.id("sampleHeading")).getText();
+        System.out.println(txt1);
 
         driver.switchTo().defaultContent();
 
 
     }
+
     public void nestedframe() {
         driver.findElement(By.xpath("//*[text()=\"Alerts, Frame & Windows\"]")).click();
-      WebElement nested=  driver.findElement(By.xpath("//*[text()=\"Nested Frames\"]"));
-    JavascriptExecutor js=(JavascriptExecutor) driver;
-    js.executeScript("arguments[0].click()",nested);
+        WebElement nested = driver.findElement(By.xpath("//*[text()=\"Nested Frames\"]"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click()", nested);
         driver.switchTo().frame("frame1");
 
         driver.switchTo().frame(0);
 
         WebElement childFrame = driver.findElement(By.xpath("//p[text()='Child Iframe']"));
 
-        System.out.println(childFrame.getText());driver.switchTo().parentFrame();
+        System.out.println(childFrame.getText());
+        driver.switchTo().parentFrame();
 
         System.out.println(driver.findElement(By.xpath("//body[text()='Parent frame']")).getText());
-}}
+    }
+}

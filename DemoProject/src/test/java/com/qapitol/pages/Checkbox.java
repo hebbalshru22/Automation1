@@ -13,14 +13,14 @@ public class Checkbox extends BaseClass {
         Thread.sleep(1000);
         driver.findElement(By.id("item-1")).click();
         Thread.sleep(1000);
-        WebElement element= driver.findElement(By.xpath("//button[@title='Expand all']"));
-        WebElement element1=driver.findElement(By.xpath("//button[@title='Collapse all']"));
-        WebElement element2=driver.findElement(By.xpath("//button[@title='Toggle']"));
-        JavascriptExecutor js=(JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click()",element);
-        js.executeScript("arguments[0].click()",element1);
-        js.executeScript("arguments[0].click()",element2);
-       // driver.findElement(By.xpath("(//*[@title=\"Toggle\"])[2]")).click();
+        WebElement element = driver.findElement(By.xpath("//button[@title='Expand all']"));
+        WebElement element1 = driver.findElement(By.xpath("//button[@title='Collapse all']"));
+        WebElement element2 = driver.findElement(By.xpath("//button[@title='Toggle']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click()", element);
+        js.executeScript("arguments[0].click()", element1);
+        js.executeScript("arguments[0].click()", element2);
+        // driver.findElement(By.xpath("(//*[@title=\"Toggle\"])[2]")).click();
 
 
     }

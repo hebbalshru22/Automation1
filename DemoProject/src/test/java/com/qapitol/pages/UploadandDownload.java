@@ -13,9 +13,9 @@ public class UploadandDownload extends BaseClass {
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div[1]/div/div/div[1]/span/div/div[1]")).click();
         Thread.sleep(1000);
 
-        WebElement vv=driver.findElement(By.id("item-7"));
-        JavascriptExecutor js=(JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click()",vv);
+        WebElement vv = driver.findElement(By.id("item-7"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click()", vv);
         js.executeScript("window.scrollBy(0,500)", "");
 
         driver.findElement(By.id("uploadFile")).sendKeys("C:/Users/Qapitol QA/Downloads/sampleFile.jpeg");

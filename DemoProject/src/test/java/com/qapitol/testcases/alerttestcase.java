@@ -7,13 +7,13 @@ import com.qapitol.pages.Widgets;
 import org.testng.annotations.Test;
 
 public class alerttestcase extends BaseClass {
-    //@Test
+    @Test
     public void alttc() throws InterruptedException {
-        Alerts ob=new Alerts();
+        Alerts ob = new Alerts();
         //ob.alerts();
-        //ob.windowpage();
-      // ob.iframe();
-        ob.nestedframe();
+        ob.windowpage();
+        //ob.iframe();
+        // ob.nestedframe();
 
     }
 
