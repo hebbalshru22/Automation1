@@ -10,37 +10,37 @@ import org.testng.annotations.Test;
 
 public class WidgetsTest extends BaseDemoClass {
 
-     @Test(priority=1)
+     @Test
     public void widgetd1() throws InterruptedException {
          WidgetsPage wp=new WidgetsPage(driver);
          wp.menutest();
      }
-    @Test(priority=3)
+    @Test
     public void widgetd2() throws InterruptedException {
         WidgetsPage wp=new WidgetsPage(driver);
 
         wp.datepickyear();
     }
-    @Test(priority=6)
+    @Test
     public void widgetd3() throws InterruptedException {
         WidgetsPage wp=new WidgetsPage(driver);
 
         wp.SelectMenu();
     }
-    @Test(priority=2)
+    @Test
     public void widgetd4() throws InterruptedException {
 
         WidgetsPage wp=new WidgetsPage(driver);
 
         wp.slider();
     }
-    @Test(priority=5)
+    @Test
     public void widgetd5() throws InterruptedException {
         WidgetsPage wp=new WidgetsPage(driver);
 
         wp.progress();
     }
-    @Test(priority=4)
+    @Test
     public void widgetd6() throws InterruptedException {
 
 

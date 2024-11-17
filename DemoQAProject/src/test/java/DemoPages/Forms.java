@@ -40,11 +40,17 @@ public class Forms {
         js.executeScript("arguments[0].click()", form1);
         js.executeScript("arguments[0].click()", form2);
         form3.sendKeys(fname);
+        System.out.println("Name");
         form4.sendKeys(fflname);
+        System.out.println("Address");
         form5.sendKeys(ffemail);
+        System.out.println("Email");
         js.executeScript("arguments[0].click()", form6);
+        System.out.println("Click button");
         form7.sendKeys(phone);
+        System.out.println("Mobile Number");
         js.executeScript("arguments[0].click()", form8);
+        System.out.println("Submit");
 
 
     }

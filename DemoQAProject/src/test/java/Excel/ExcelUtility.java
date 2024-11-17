@@ -16,7 +16,7 @@ public class ExcelUtility {
     public int getLastRowNumber(String sheetname) throws IOException {
         FileInputStream fs = new FileInputStream("C:\\Users\\Qapitol QA\\Downloads\\Book 1 (2).xlsx");
         Workbook wb = WorkbookFactory.create(fs);
-        int  retVal = wb.getSheet(sheetname).getLastRowNum();
+        int retVal = wb.getSheet(sheetname).getLastRowNum();
         return retVal;
     }
 }

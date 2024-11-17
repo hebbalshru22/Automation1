@@ -14,8 +14,7 @@ public class AlertTest  extends BaseDemoClass {
         ap.demoalert("shruti");
         }
     @Test(priority = 1)
-    public void TestAlert1()
-    {
+    public void TestAlert1() throws InterruptedException {
         AlertsPage ap=new AlertsPage(driver);
         ap.demoWindow();
 

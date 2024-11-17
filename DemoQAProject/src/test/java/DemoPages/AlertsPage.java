@@ -78,8 +78,9 @@ public class AlertsPage extends BaseDemoClass {
 
     //Action methods for frame
     public void frame() {
-        wb.click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click()", wb);
+
         js.executeScript("arguments[0].click()", item);
         System.out.println("Hi");
         driver.switchTo().frame("frame1");
@@ -108,7 +109,7 @@ public class AlertsPage extends BaseDemoClass {
 
     }
 
-    public void demoWindow() {
+    public void demoWindow() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", alertsclick);
         js.executeScript("arguments[0].click()", bw);
@@ -121,11 +122,14 @@ public class AlertsPage extends BaseDemoClass {
         System.out.println("First Tab");
         System.out.println(Ftext.getText());
         driver.close();
+       // shutbrowser();
         System.out.println("Closed tab1");
+        Thread.sleep(30);
         driver.switchTo().window(nstr);
         js.executeScript("arguments[0].click()", Stab);
         String winID = driver.getWindowHandle();
         System.out.println(winID);
+        //shutbrowser();
         //driver.close();
         driver.switchTo().window(nstr);
         js.executeScript("arguments[0].click()", Ttab);

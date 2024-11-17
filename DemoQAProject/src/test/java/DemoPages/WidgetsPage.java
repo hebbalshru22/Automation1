@@ -131,11 +131,11 @@ public class WidgetsPage extends BaseDemoClass {
         Actions act = new Actions(driver);
         act.keyDown(Keys.CONTROL).click(tab2);
         System.out.println("This is new tab");
-        shutbrowser();
+       /* shutbrowser();
         System.out.println("This is new tab");
         act.keyDown(Keys.CONTROL).click(tab4);
         System.out.println("This is new tab");
-        shutbrowser();
+        shutbrowser();*/
 
     }
 

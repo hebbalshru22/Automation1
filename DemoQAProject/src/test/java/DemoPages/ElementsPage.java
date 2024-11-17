@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -117,15 +119,24 @@ public class ElementsPage {
 
 
     //Action Methods for Text box
-    public void textPage(String uname, String uemail, String caddress, String paddress) {
-        Ele.click();
-        textClick.click();
+    public void textPage(String uname, String uemail, String caddress, String paddress)
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+       // Ele.click();
+        js.executeScript("arguments[0].click()", Ele);
+
+        js.executeScript("arguments[0].click()", textClick);
+
+       // textClick.click();
+        String url="https://demoqa.com/text-box";
+        String crul= driver.getCurrentUrl();
+        Assert.assertEquals(url,crul);
         passname.sendKeys(uname);
         passemail.sendKeys(uemail);
         passcAddress.sendKeys(caddress);
         passpAddress.sendKeys(paddress);
         System.out.println("This is text box test");
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+       // JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", formSubmit);
     }
 
@@ -133,6 +144,9 @@ public class ElementsPage {
     public void checkbox() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", cbmenu);
+        String cburl="https://demoqa.com/checkbox";
+        String ccbrul= driver.getCurrentUrl();
+        Assert.assertEquals(cburl,ccbrul);
         System.out.println("This is click first");
         js.executeScript("arguments[0].click()", fcheck);
         System.out.println("This is click second");
@@ -142,10 +156,14 @@ public class ElementsPage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         js.executeScript("arguments[0].click()", radioclick);
+       // Assert.fail();
+        SoftAssert sa=new SoftAssert();
+        sa.assertEquals(1,2);
+       // sa.assertAll();
         System.out.println("This is radio button test");
         js.executeScript("arguments[0].click()", radioyesclick);
         System.out.println(radiotext.getText());
-    }
+       }
 
     public void webtablePage(String nweb, String lweb, String lemail, String lage, String lsal, String ldep) {
         WebAdd.click();
