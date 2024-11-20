@@ -2,10 +2,12 @@ package DemoTestCases;
 
 import BaseDemo.BaseDemoClass;
 import DemoPages.AlertsPage;
+import Excel.ListenerImplementation;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(ListenerImplementation.class)
 public class AlertTest  extends BaseDemoClass {
     @Test(priority = 3,dependsOnMethods ="TestAlert1" )
     public void TestAlert()

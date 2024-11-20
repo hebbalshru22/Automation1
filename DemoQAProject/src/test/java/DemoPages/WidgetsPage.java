@@ -6,10 +6,13 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
 
 public class WidgetsPage extends BaseDemoClass {
@@ -76,6 +79,8 @@ public class WidgetsPage extends BaseDemoClass {
     WebElement prog2;
     @FindBy(id = "progressBar")
     WebElement prog3;
+    @FindBy(xpath="//*[@class=\"progress-bar bg-info\"]")
+    WebElement prog4;
 
     //Locators for tabs
     @FindBy(id = "item-5")
@@ -145,17 +150,16 @@ public class WidgetsPage extends BaseDemoClass {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", date);
         js.executeScript("arguments[0].click()", prog1);
-
         js.executeScript("arguments[0].click()", prog2);
+        WebElement progressbar=driver.findElement(By.xpath("//div[@role='progressbar']"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        boolean progressStatus = wait.until(ExpectedConditions.attributeToBe(progressbar, "aria-valuenow", "100"));
+        if (progressStatus == true) {
+            WebElement dri=driver.findElement(By.xpath("//button[@id='resetButton']"));
+           // wait.until(ExpectedConditions.presenceOfElementLocated(js.executeScript("arguments[0].click()",dri));
+        }
 
-        Thread.sleep(20);
-        js.executeScript("arguments[0].click()", prog2);
-        System.out.println("This is of progress bar");
-
-        Actions act = new Actions(driver);
-        System.out.println(prog3.getLocation());
     }
-
 
     //Action methods for Select menu
     public void SelectMenu() {

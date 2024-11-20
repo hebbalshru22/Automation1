@@ -24,7 +24,6 @@ ExcelUtility ex= new ExcelUtility();
         System.out.println("This is third row");
         String mobile=ex.getExcelData("Sheet1",i,3);
         System.out.println("This is fourth row");
-
         Thread.sleep(30);
        // int phone = ex.getExcelData("Sheet1", 1, 3);
         Forms fom =new Forms(driver);

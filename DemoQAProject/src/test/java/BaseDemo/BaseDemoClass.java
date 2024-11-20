@@ -20,17 +20,17 @@ public class BaseDemoClass {
 
     @BeforeTest
  //public void lauchbrowser() throws IOException {
-   @Parameters("browser")
+  @Parameters("browser")
     public static void lauchbrowser(String browsername) throws IOException {
         if (browsername.equalsIgnoreCase("chrome"))
-        {  //driver = new EdgeDriver();
+        {
             driver = new ChromeDriver();
         } else if (browsername.equalsIgnoreCase("edge")) {  //driver = new EdgeDriver();
             driver = new EdgeDriver();
         } else if (browsername.equalsIgnoreCase("firefox")) {  //driver = new EdgeDriver();
             driver = new FirefoxDriver();
         }
-        // driver = new EdgeDriver();
+       //driver = new EdgeDriver();
        // driver = new ChromeDriver();
         prop = new Properties();
         FileInputStream fs = new FileInputStream("C:\\New prog\\DemoQAProject\\src\\test\\java\\Excel\\data.properties");

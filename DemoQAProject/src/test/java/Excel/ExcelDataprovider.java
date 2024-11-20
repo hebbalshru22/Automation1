@@ -12,14 +12,15 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 
 public class ExcelDataprovider {
-   @DataProvider(name="loginData")
-    public   String [][] getData() throws IOException {
+    @DataProvider(name = "loginData")
+    public String[][] getData() throws IOException {
         File excel = new File("C:\\Users\\Qapitol QA\\Downloads\\Book 2.xlsx");
         System.out.println(excel.exists());
         FileInputStream fis = new FileInputStream(excel);
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
         XSSFSheet sheet = workbook.getSheet("Sheet1");
-        int noOfRows = sheet.getPhysicalNumberOfRows();
+        //int noOfRows = sheet.getPhysicalNumberOfRows();
+        int noOfRows = sheet.getLastRowNum();
         int noOfColoumns = sheet.getRow(0).getLastCellNum();
         String[][] data = new String[noOfRows - 1][noOfColoumns];
         for (int i = 0; i < noOfRows - 1; i++) {
@@ -30,7 +31,7 @@ public class ExcelDataprovider {
         }
         workbook.close();
         fis.close();
-       return data;
-     }
+        return data;
     }
+}
 

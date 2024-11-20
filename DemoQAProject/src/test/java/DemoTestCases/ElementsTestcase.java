@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class ElementsTestcase extends BaseDemoClass {
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups={"sanity"})
 
     public void ElementTest() throws InterruptedException {
         ElementsPage ap=new ElementsPage(driver);
@@ -26,7 +26,7 @@ public class ElementsTestcase extends BaseDemoClass {
         ap.checkbox();
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4,groups = {"sanity"})
 
     public void ElementTest2() throws InterruptedException {
         ElementsPage ap=new ElementsPage(driver);
