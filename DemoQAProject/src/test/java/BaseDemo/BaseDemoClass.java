@@ -18,9 +18,9 @@ public class BaseDemoClass {
     public static WebDriver driver;
     public static Properties prop;
 
-    @BeforeTest
- //public void lauchbrowser() throws IOException {
-  @Parameters("browser")
+    @BeforeSuite
+    public void lauchbrowser() throws IOException {
+   /*  @Parameters("browser")
     public static void lauchbrowser(String browsername) throws IOException {
         if (browsername.equalsIgnoreCase("chrome"))
         {
@@ -29,21 +29,22 @@ public class BaseDemoClass {
             driver = new EdgeDriver();
         } else if (browsername.equalsIgnoreCase("firefox")) {  //driver = new EdgeDriver();
             driver = new FirefoxDriver();
-        }
-       //driver = new EdgeDriver();
-       // driver = new ChromeDriver();
+        }*/
+        driver = new EdgeDriver();
+        // driver = new ChromeDriver();
         prop = new Properties();
         FileInputStream fs = new FileInputStream("C:\\New prog\\DemoQAProject\\src\\test\\java\\Excel\\data.properties");
         prop.load(fs);
-       driver.get(prop.getProperty("url"));
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-            driver.manage().window().maximize();
+        driver.get(prop.getProperty("url"));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().window().maximize();
 
     }
 
-    @AfterTest
+    @AfterSuite
     public void shutbrowser() {
         driver.close();
 
 
-}}
+    }
+}
