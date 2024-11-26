@@ -1,19 +1,22 @@
 package Controller;
 
 import model.Student;
+import model.Teacher;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class ManagerClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        List<Teacher> teachers = new ArrayList<>();
         List<Student> students = new ArrayList<>();
-       service.ServiceImplementation serv = new service.ServiceImplementation();
+        service.ServiceImplementation service = new service.ServiceImplementation();
         while (true) {
             Scanner sc=new Scanner(System.in);
             System.out.println("Menu: ");
-            System.out.println("1. Add Student\n 2. Remove Student\n 3.Get Student\n 4.dispaly student Details\n 5.display teacher Details\n");
+            System.out.println("1. Add Student\n 2. Remove Student\n 3.Get Student\n 4.Add Teacher\n 5.Remove Teacher\n 6.Get Teacher\n 7.dispaly student Details\n 8.display teacher Details\n");
             int option = sc.nextInt();
             switch (option)
             {
@@ -44,21 +47,64 @@ public class ManagerClass {
                 {
                     System.out.println("Enter the student ID you want Remove: ");
                     int studentID = sc.nextInt();
-                    serv.removeStudentById(students, studentID);
+                    service.removeStudentById(students, studentID);
                 }
                 break;
                 case 3:
                 {
                     System.out.println("Enter the student ID you want fetch: ");
                     int studentID = sc.nextInt();
-                    serv.getStudentById(students, studentID);
+                    service.getStudentById(students, studentID);
 
 
                 }
                 break;
                 case 4:
                 {
-                    serv.displayStudents(students);
+                    while (true) {
+                        System.out.print("Enter Teacher Name: ");
+                        String name = sc.next();
+
+                        System.out.print("Enter subject: ");
+                        String subject = sc.next();
+
+                        System.out.print("Enter salary: ");
+                        int salary = sc.nextInt();
+
+                        teachers.add(new Teacher(name,subject,salary));
+                        System.out.print("Do you want to add another teacher? (yes/no): ");
+                        String response = sc.next();
+
+                        if (!response.equalsIgnoreCase("yes"))
+                        {
+                            break;
+                        }
+                    }
+                }
+                break;
+                case 5:
+                {
+                    System.out.println("Enter the teacher name you want Remove: ");
+                    String teacherName = sc.next();
+                    service.removeTeacherByName(teachers,teacherName);
+                }
+                break;
+                case 6:
+                {
+
+                    System.out.println("Enter the teacher Name you want fetch: ");
+                    String teacherName = sc.next();
+                    service.getTeacherByName(teachers,teacherName);
+                }
+                break;
+                case 7:
+                {
+                    service.displayStudents(students);
+                }
+                break;
+                case 8:
+                {
+                    service.displayTeachers(teachers);
                 }
                 break;
                 default:
@@ -69,5 +115,4 @@ public class ManagerClass {
             }
         }
 
-    }
-}
+    }}

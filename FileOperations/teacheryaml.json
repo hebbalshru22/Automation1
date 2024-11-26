@@ -1,0 +1,7 @@
+---
+- name: "Shruti"
+  subject: "cs"
+  salary: 38888.0
+- name: "Nisha"
+  subject: "ec"
+  salary: 38000.0

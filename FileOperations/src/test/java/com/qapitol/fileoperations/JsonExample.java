@@ -17,19 +17,21 @@ public class JsonExample {
         }
     }
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
         // Create a sample object
         Person person = new Person("John Doe", 30);
+        Person person1 = new Person("John ", 32);
+        Person person2 = new Person("Doe", 33);
 
         // Create an ObjectMapper instance
         ObjectMapper objectMapper = new ObjectMapper();
 
         // Write the object to a JSON file
-        try {
+
             objectMapper.writeValue(new File("person.json"), person);
             System.out.println("Data saved to person.json");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+
     }
 }
