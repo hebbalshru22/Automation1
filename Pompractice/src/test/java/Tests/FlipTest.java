@@ -1,5 +1,4 @@
 package Tests;
-
 import BasePack.BaseClass;
 import Pages.FlipPage;
 import org.testng.annotations.AfterTest;
@@ -11,6 +10,7 @@ import java.io.IOException;
 public class FlipTest extends BaseClass {
 
     FlipPage fp;
+
     @BeforeTest
     public  void lauch() throws IOException {
         setUp2();

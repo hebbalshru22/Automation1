@@ -31,6 +31,7 @@ public class LoginDataprovider extends BaseClass{
         String expected="\"Bad credentials\"";
         Assert.assertEquals(actual,expected,"Matching");
     }
+
     @DataProvider(name = "login")
     public String[][] loginData() throws IOException {
         FileInputStream fis = new FileInputStream("C:\\Users\\Qapitol QA\\Downloads\\Book 3 (1).xlsx");
